@@ -7,6 +7,7 @@ import {
 import GridLayout from "../components/ui/gridlayout";
 import PokeCard from "../components/pokemon/pokecard";
 import Link from "next/link";
+import Head from "next/head";
 
 function Home({ fetchPokemon }) {
   const [pokemon, setPokemon] = useState(fetchPokemon);
@@ -30,6 +31,9 @@ function Home({ fetchPokemon }) {
 
   return (
     <>
+      <Head>
+        <title>A Pokedex Made For True Trainers</title>
+      </Head>
       <GridLayout>
         {pokemon.results.map((pokeInfo, index) => (
           <Fragment key={pokeInfo.name}>
