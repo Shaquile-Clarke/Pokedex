@@ -1,6 +1,6 @@
 export default function PokeAbilities({ abilities }) {
   return (
-    <div className="flex justify-center">
+    <div className="flex flex-wrap justify-center">
       {abilities.map((ability) => (
         <div
           key={ability.ability.name}

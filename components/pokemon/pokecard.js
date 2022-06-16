@@ -7,7 +7,7 @@ export default function PokeCard({ name, indexNo, imageUrl, indexOffset }) {
         {name}
       </p>
       <div className="m-auto">
-        <Image src={imageUrl} alt={name + " image"} width={150} height={150} />
+        <Image src={imageUrl} alt={name} width={150} height={150} />
       </div>
       <span className="py-2 font-bold text-2xl text-red-700">
         #{indexNo + indexOffset}

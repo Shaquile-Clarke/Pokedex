@@ -11,9 +11,12 @@ export default function Pokemon(props) {
     <>
       <Head>
         <meta name="description" content={`All ${props.name} information`} />
-        <title>Pokédex - {props.name}</title>
+        <title>
+          Pokédex - {props.name.charAt(0).toUpperCase() + props.name.slice(1)}
+        </title>
       </Head>
-      <h2 className="text-center font-bold text-3xl first-letter:uppercase underline ">
+
+      <h2 className="text-center font-bold text-3xl first-letter:uppercase">
         {props.name}
       </h2>
       <div className="flex justify-center">
