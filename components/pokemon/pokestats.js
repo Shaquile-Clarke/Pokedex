@@ -6,7 +6,7 @@ export default function PokeStats({ stats, highestStat }) {
     <div className="p-3">
       {stats.map((stat) => (
         <Fragment key={stat.stat.name}>
-          <div className="flex flex-col justify-around text-center">
+          <div className="flex flex-col justify-around text-left">
             <div className="w-full ">
               <p className="first-letter:uppercase">{stat.stat.name}</p>
             </div>
