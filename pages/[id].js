@@ -16,21 +16,28 @@ export default function Pokemon(props) {
         </title>
       </Head>
 
-      <h2 className="text-center font-bold text-3xl first-letter:uppercase">
-        {props.name}
-      </h2>
       <div className="flex justify-center">
-        <Image
-          src={getPokemonImage(props.id)}
-          alt={props.name}
-          width={200}
-          height={200}
-        />
+        <div>
+          <h2 className="text-center font-bold text-3xl first-letter:uppercase">
+            {props.name}
+          </h2>
+          <div className="flex justify-center">
+            <Image
+              src={getPokemonImage(props.id)}
+              alt={props.name}
+              width={200}
+              height={200}
+            />
+          </div>
+          <PokeType types={props.types} />
+        </div>
+
+        <div>
+          <PokeAttributes height={props.height} weight={props.weight} />
+          <PokeStats stats={props.stats} highestStat={props.highestStat} />
+        </div>
       </div>
-      <PokeType types={props.types} />
       <PokeAbilities abilities={props.abilities} />
-      <PokeAttributes height={props.height} weight={props.weight} />
-      <PokeStats stats={props.stats} highestStat={props.highestStat} />
     </>
   );
 }

@@ -32,6 +32,10 @@ function Home({ fetchPokemon }) {
   return (
     <>
       <Head>
+        <meta
+          name="description"
+          content="The greastest pokdex to ever made. Search any pokemon,anytime,anywhere from any device."
+        />
         <title>A Pokedex Made For True Trainers</title>
       </Head>
       <GridLayout>
